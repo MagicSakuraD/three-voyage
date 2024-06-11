@@ -2,6 +2,7 @@ import { useThree, extend, useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "@react-three/drei";
+import CustomObject from "./CustomObject";
 
 const Geometry = () => {
   const torusRef = useRef<THREE.Mesh>(null);
@@ -33,6 +34,7 @@ const Geometry = () => {
           <meshToonMaterial args={[{ color: "#8b5cf6" }]} />
         </mesh>
       </group>
+      <CustomObject />
     </>
   );
 };

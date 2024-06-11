@@ -8,7 +8,15 @@ import Geometry from "./Geometry";
 const CubePage = () => {
   return (
     <div className="container mt-6 mx-auto h-2/3">
-      <Canvas camera={{ position: [0, 0, 10] }}>
+      <Canvas
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 200,
+
+          position: [0, 0, 10],
+        }}
+      >
         <ambientLight intensity={0.1} />
         <directionalLight color="#dcfce7" position={[0, 0, 2]} />
         <Geometry />
